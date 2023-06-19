@@ -18579,12 +18579,6 @@ angular.module('app')
         getViewportDims();
         document.addEventListener('resume', getViewportDims);
         window.addEventListener('orientationchange', getViewportDims);
-
-        var networkState = navigator.connection.type;
-        
-        if(networkState!= undefined && networkState != Connection.NONE){
-            onOnline();
-        }else {onOffline()};
         
         document.addEventListener("offline", onOffline);
         document.addEventListener("online", onOnline);
